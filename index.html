@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Encanto do Lar — Cama, Mesa, Banho e Decoração</title>
+<meta name="description" content="Encanto do Lar — cama, mesa, banho e decoração para deixar sua casa mais bonita, confortável e elegante.">
+<meta name="theme-color" content="#755943">
+<meta property="og:title" content="Encanto do Lar">
+<meta property="og:description" content="Seu lar mais bonito começa aqui.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://encantodolar.shop">
+<link rel="canonical" href="https://encantodolar.shop">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preconnect" href="https://viacep.com.br">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Encanto do Lar","url":"https://encantodolar.shop","description":"Cama, mesa, banho e decoração para sua casa"}
+</script>
+</head>
+<body>
+
+<!-- ============ BARRA PROMOCIONAL ============ -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <span id="promoMessage">Seu lar mais bonito começa aqui ✨</span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+
+    <a href="#" class="logo" id="logoLink">
+      <span class="logo-mark"><i class="fas fa-couch"></i></span>
+      <span class="logo-text">Encanto do Lar</span>
+    </a>
+
+    <div class="search-bar">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Buscar produtos..." autocomplete="off">
+      <button class="search-clear" id="searchClear" aria-label="Limpar"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="cartBtn" aria-label="Carrinho">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navegação por categorias -->
+  <nav class="cat-nav" id="catNav">
+    <div class="container cat-nav-inner">
+      <a href="#" class="cat-link" data-cat="all">Todos</a>
+      <a href="#" class="cat-link" data-cat="cama">Cama</a>
+      <a href="#" class="cat-link" data-cat="mesa">Mesa</a>
+      <a href="#" class="cat-link" data-cat="banho">Banho</a>
+      <a href="#" class="cat-link" data-cat="edredons">Edredons e Cobertores</a>
+      <a href="#" class="cat-link" data-cat="jogos-cama">Jogos de Cama</a>
+      <a href="#" class="cat-link" data-cat="toalhas">Toalhas</a>
+      <a href="#" class="cat-link" data-cat="colchas">Colchas e Cobre-leitos</a>
+      <a href="#" class="cat-link" data-cat="decoracao">Decoração</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ MENU LATERAL MOBILE ============ -->
+<aside class="side-menu" id="sideMenu">
+  <div class="side-menu-head">
+    <span class="logo-text">Encanto do Lar</span>
+    <button id="closeMenu" aria-label="Fechar"><i class="fas fa-times"></i></button>
+  </div>
+  <ul class="side-menu-links" id="sideMenuLinks">
+    <li><a href="#" data-cat="all"><i class="fas fa-th-large"></i> Todos os produtos</a></li>
+    <li><a href="#" data-cat="cama"><i class="fas fa-bed"></i> Cama</a></li>
+    <li><a href="#" data-cat="mesa"><i class="fas fa-utensils"></i> Mesa</a></li>
+    <li><a href="#" data-cat="banho"><i class="fas fa-bath"></i> Banho</a></li>
+    <li><a href="#" data-cat="edredons"><i class="fas fa-blanket"></i> Edredons e Cobertores</a></li>
+    <li><a href="#" data-cat="jogos-cama"><i class="fas fa-layer-group"></i> Jogos de Cama</a></li>
+    <li><a href="#" data-cat="toalhas"><i class="fas fa-scroll"></i> Toalhas</a></li>
+    <li><a href="#" data-cat="colchas"><i class="fas fa-bed"></i> Colchas e Cobre-leitos</a></li>
+    <li><a href="#" data-cat="decoracao"><i class="fas fa-palette"></i> Decoração</a></li>
+    <li class="side-divider"></li>
+    <li><a href="#" id="sideContact"><i class="fab fa-whatsapp"></i> Fale conosco</a></li>
+  </ul>
+</aside>
+<div class="overlay" id="overlay"></div>
+
+<!-- ============ PÁGINAS ============ -->
+<main id="app">
+
+  <!-- ===== HOME ===== -->
+  <section class="page active" id="page-home">
+    <!-- Banner principal -->
+    <div class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="hero-tag">Bem-vindo à Encanto do Lar</span>
+          <h1>Seu lar merece mais conforto</h1>
+          <p>Encontre tudo para transformar sua casa em um ambiente especial.</p>
+          <button class="btn btn-primary" id="heroExplore">EXPLORAR PRODUTOS</button>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=80&auto=format&fit=crop" alt="Quarto decorado aconchegante" loading="eager">
+        </div>
+      </div>
+    </div>
+
+    <!-- Categorias -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Compre por Categoria</h2>
+        <div class="categories-grid" id="categoriesGrid"></div>
+      </div>
+    </section>
+
+    <!-- Destaques -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Produtos em Destaque</h2>
+          <p class="section-sub">Selecionados para deixar sua casa ainda mais bonita</p>
+        </div>
+        <div class="products-grid" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <!-- Banner secundário -->
+    <section class="banner-secondary">
+      <div class="container banner-secondary-inner">
+        <div>
+          <h3>Conforto que se sente, elegância que se vê</h3>
+          <p>Produtos selecionados com cuidado para sua casa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="section">
+      <div class="container benefits">
+        <div class="benefit"><i class="fas fa-shopping-bag"></i><h4>Compra Prática</h4><p>Finalize pelo WhatsApp em poucos cliques.</p></div>
+        <div class="benefit"><i class="fas fa-headset"></i><h4>Atendimento Direto</h4><p>Fale conosco e tire suas dúvidas na hora.</p></div>
+        <div class="benefit"><i class="fas fa-star"></i><h4>Produtos Selecionados</h4><p>Curadoria pensada para o seu lar.</p></div>
+        <div class="benefit"><i class="fas fa-truck"></i><h4>Entrega Combinada</h4><p>Informações claras sobre envio e prazos.</p></div>
+      </div>
+    </section>
+
+    <!-- Catálogo completo -->
+    <section class="section section-alt" id="catalog">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Todos os Produtos</h2>
+          <p class="section-sub" id="resultsCount">20 produtos disponíveis</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters-bar">
+          <div class="filter-group">
+            <label for="filterCat">Categoria</label>
+            <select id="filterCat">
+              <option value="">Todas</option>
+              <option value="cama">Cama</option>
+              <option value="mesa">Mesa</option>
+              <option value="banho">Banho</option>
+              <option value="edredons">Edredons e Cobertores</option>
+              <option value="jogos-cama">Jogos de Cama</option>
+              <option value="toalhas">Toalhas</option>
+              <option value="colchas">Colchas e Cobre-leitos</option>
+              <option value="decoracao">Decoração</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filterPrice">Preço</label>
+            <select id="filterPrice">
+              <option value="">Todos os preços</option>
+              <option value="0-100">Até R$ 100</option>
+              <option value="100-200">R$ 100 a R$ 200</option>
+              <option value="200-350">R$ 200 a R$ 350</option>
+              <option value="350-9999">Acima de R$ 350</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="sortBy">Ordenar por</label>
+            <select id="sortBy">
+              <option value="featured">Destaques</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="name">Nome (A-Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none">
+          <i class="fas fa-search"></i>
+          <h3>Nenhum produto encontrado</h3>
+          <p>Tente ajustar os filtros ou pesquisar por outro nome.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="faq">
+          <details><summary>Como funciona o frete?</summary><p>O frete é combinado diretamente pelo WhatsApp após o envio do pedido. Para São Bento (PB), há opção de entrega local ou retirada.</p></details>
+          <details><summary>Como faço o pagamento?</summary><p>Após enviar o pedido pelo WhatsApp, nossa equipe combina a forma de pagamento com você.</p></details>
+          <details><summary>Posso trocar um produto?</summary><p>Sim. Consulte nossa Política de Trocas e Devoluções para mais detalhes.</p></details>
+          <details><summary>Vocês entregam em todo o Brasil?</summary><p>Sim! Enviamos para todo o Brasil — o frete é calculado conforme o CEP.</p></details>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ===== PRODUTO (detalhe) ===== -->
+  <section class="page" id="page-product">
+    <div class="container">
+      <button class="back-link" id="backFromProduct"><i class="fas fa-arrow-left"></i> Voltar</button>
+      <div class="product-detail" id="productDetail"></div>
+    </div>
+  </section>
+
+  <!-- ===== CARRINHO ===== -->
+  <section class="page" id="page-cart">
+    <div class="container">
+      <button class="back-link" id="backFromCart"><i class="fas fa-arrow-left"></i> Continuar comprando</button>
+      <h1 class="page-title">Seu Carrinho</h1>
+      <div class="cart-layout">
+        <div class="cart-items" id="cartItems"></div>
+        <aside class="cart-summary" id="cartSummary"></aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHECKOUT ===== -->
+  <section class="page" id="page-checkout">
+    <div class="container">
+      <button class="back-link" id="backFromCheckout"><i class="fas fa-arrow-left"></i> Voltar ao carrinho</button>
+      <h1 class="page-title">Finalizar Pedido</h1>
+      <p class="page-sub">Preencha os dados de entrega. A finalização e o frete serão confirmados pelo WhatsApp.</p>
+
+      <div class="checkout-layout">
+        <form class="checkout-form" id="checkoutForm" novalidate>
+          <h3>Dados do Cliente</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Nome completo *</label><input type="text" name="name" required></div>
+          </div>
+          <div class="form-row two">
+            <div class="form-group"><label>Telefone (WhatsApp) *</label><input type="tel" name="phone" placeholder="(00) 00000-0000" required></div>
+            <div class="form-group"><label>E-mail (opcional)</label><input type="email" name="email"></div>
+          </div>
+
+          <h3>Endereço de Entrega</h3>
+          <div class="form-row two">
+            <div class="form-group">
+              <label>CEP *</label>
+              <input type="text" name="cep" id="cepInput" placeholder="00000-000" required>
+              <small class="form-hint" id="cepHint"></small>
+            </div>
+            <div class="form-group"><label>Rua *</label><input type="text" name="street" required></div>
+          </div>
+          <div class="form-row two">
+            <div class="form-group"><label>Número *</label><input type="text" name="number" required></div>
+            <div class="form-group"><label>Complemento</label><input type="text" name="complement"></div>
+          </div>
+          <div class="form-row two">
+            <div class="form-group"><label>Bairro *</label><input type="text" name="neighborhood" required></div>
+            <div class="form-group"><label>Cidade *</label><input type="text" name="city" required></div>
+          </div>
+          <div class="form-row two">
+            <div class="form-group"><label>Estado *</label><input type="text" name="state" maxlength="2" required></div>
+            <div class="form-group"><label>Ponto de referência</label><input type="text" name="reference"></div>
+          </div>
+
+          <h3>Observações</h3>
+          <div class="form-row">
+            <textarea name="notes" rows="3" placeholder="Alguma observação sobre o pedido?"></textarea>
+          </div>
+
+          <div class="form-error" id="formError" style="display:none"></div>
+
+          <button type="button" class="btn btn-primary btn-block" id="finalizeBtn">
+            <i class="fab fa-whatsapp"></i> FINALIZAR PEDIDO PELO WHATSAPP
+          </button>
+          <p class="form-note">Você será redirecionado para o WhatsApp com o pedido pronto. Nenhuma cobrança é feita automaticamente.</p>
+        </form>
+
+        <aside class="checkout-summary" id="checkoutSummary"></aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POLÍTICAS ===== -->
+  <section class="page" id="page-privacy">
+    <div class="container static-page">
+      <button class="back-link" data-back-home><i class="fas fa-arrow-left"></i> Voltar</button>
+      <h1>Política de Privacidade</h1>
+      <p>Coletamos apenas os dados necessários para processar seu pedido (nome, telefone, endereço). Esses dados são usados exclusivamente para entrega e contato sobre o pedido. Não compartilhamos suas informações com terceiros, exceto quando necessário para viabilizar a entrega. Em conformidade com a LGPD (Lei 13.709/2018), você pode solicitar a exclusão dos seus dados pelo nosso WhatsApp.</p>
+    </div>
+  </section>
+
+  <section class="page" id="page-returns">
+    <div class="container static-page">
+      <button class="back-link" data-back-home><i class="fas fa-arrow-left"></i> Voltar</button>
+      <h1>Política de Trocas e Devoluções</h1>
+      <p>Você tem até 7 dias corridos após o recebimento para solicitar troca ou devolução, conforme o Código de Defesa do Consumidor. Produtos devem estar sem uso e na embalagem original. Entre em contato pelo WhatsApp para iniciar o processo.</p>
+    </div>
+  </section>
+
+  <section class="page" id="page-terms">
+    <div class="container static-page">
+      <button class="back-link" data-back-home><i class="fas fa-arrow-left"></i> Voltar</button>
+      <h1>Termos de Uso</h1>
+      <p>Ao utilizar este site você concorda que as informações de produtos são ilustrativas e podem sofrer pequenas variações. Preços e disponibilidade estão sujeitos a alteração. A finalização do pedido ocorre por meio do WhatsApp, onde todos os detalhes são confirmados.</p>
+    </div>
+  </section>
+
+  <section class="page" id="page-shipping">
+    <div class="container static-page">
+      <button class="back-link" data-back-home><i class="fas fa-arrow-left"></i> Voltar</button>
+      <h1>Informações sobre Entrega</h1>
+      <p>Para São Bento (PB): entrega local combinada ou retirada. Para outras cidades: enviamos por transportadora ou Correios — o frete é combinado diretamente pelo WhatsApp após o envio do pedido.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4>Encanto do Lar</h4>
+      <p>Cama, mesa, banho e decoração para deixar sua casa mais bonita, confortável e elegante.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="#" data-cat="all">Todos os produtos</a></li>
+        <li><a href="#" data-cat="cama">Cama</a></li>
+        <li><a href="#" data-cat="mesa">Mesa</a></li>
+        <li><a href="#" data-cat="banho">Banho</a></li>
+        <li><a href="#" data-cat="decoracao">Decoração</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="#" data-cat="jogos-cama">Jogos de Cama</a></li>
+        <li><a href="#" data-cat="toalhas">Toalhas</a></li>
+        <li><a href="#" data-cat="edredons">Edredons</a></li>
+        <li><a href="#" data-cat="colchas">Colchas</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#" data-page="privacy">Política de Privacidade</a></li>
+        <li><a href="#" data-page="returns">Trocas e Devoluções</a></li>
+        <li><a href="#" data-page="terms">Termos de Uso</a></li>
+        <li><a href="#" data-page="shipping">Entrega</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="#" id="footerWhats" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        <li><a href="#" id="footerInsta" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Encanto do Lar — encantodolar.shop</p>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLUTUANTE ============ -->
+<a href="#" class="whatsapp-float" id="whatsFloat" aria-label="WhatsApp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<script src="js/config.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
